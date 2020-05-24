@@ -15,4 +15,21 @@
         </extension>
     </addon>
 
-</addons>
+<addon id="script.module.dnspython" name="DNS Python" provider-name="dnspython" version="1.12.0">
+  <requires>
+    <import addon="xbmc.python" version="2.1.0" />
+  </requires>
+  <extension library="lib" point="xbmc.python.module" />
+  <extension point="xbmc.addon.metadata">
+	<summary>A Pure Python DNS module</summary>
+	<description>A Pure Python DNS module</description>
+	<disclaimer lang="en" />
+	<language>en</language>
+    <platform>all</platform>
+	<license>BSD-style license</license>
+	<forum />
+	<website>http://www.dnspython.org/</website>
+	<email />
+	<source>https://github.com/rthalley/dnspython</source>
+  </extension>
+</addon></addons>
