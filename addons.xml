@@ -83,4 +83,30 @@
 v1.0.0 (2018-04-14)
     - Initial version</news>
   </extension>
+</addon><addon id="plugin.video.openstream" name="Open Stream" provider-name="Ronan" version="0.0.1">
+    <requires>
+        <import addon="xbmc.python" version="2.25.0" />
+        <import addon="script.module.routing" version="0.2.0" />
+
+    </requires>
+    <extension library="main.py" point="xbmc.python.pluginsource">
+        <provides>audio video</provides>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en_GB">This addon asks for a stream URL and plays it. Simple.</summary>
+        <description lang="en_GB" />
+        <language />
+        <platform>linux osx windx</platform>
+        <license>nolicense</license>
+        <forum />
+        <website />
+        <email />
+        <source />
+        <news />
+        <disclaimer />
+        <assets>
+            <icon>resources/icon.png</icon>
+            <fanart>resources/fanart.jpg</fanart>
+        </assets>
+    </extension>
 </addon></addons>
