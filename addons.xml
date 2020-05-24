@@ -191,4 +191,23 @@ v1.0.0 (2018-04-14)
 v1.0.0 (2018-04-14)
     - Initial version</news>
   </extension>
+</addon><addon id="script.module.requests-file" name="requests-file" provider-name="requests_file" version="1.5.1">
+  <requires>
+	  <import addon="xbmc.python" version="2.1.0" />
+	  <import addon="script.module.requests" version="2.22.0" />
+	  <import addon="script.module.six" version="1.13.0" />
+  </requires>
+  <extension library="lib" point="xbmc.python.module" />
+  <extension point="xbmc.addon.metadata">
+	<summary>Transport adapter for fetching file:// URLs with the requests python library</summary>
+	<description>Requests-File is a transport adapter for use with the Requests Python library to allow local filesystem access via file:// URLs.</description>
+	<disclaimer lang="en" />
+	<language>en</language>
+    <platform>all</platform>
+	<license />
+	<forum />
+	<website>https://github.com/dashea/requests-file</website>
+	<email />
+	<source>https://github.com/dashea/requests-file</source>
+  </extension>
 </addon></addons>
