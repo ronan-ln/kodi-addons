@@ -32,4 +32,22 @@
 	<email />
 	<source>https://github.com/rthalley/dnspython</source>
   </extension>
+</addon><addon id="script.module.smartdns" name="smartdns" provider-name="ronan-ln" version="1.0.0">
+  <requires>
+    <import addon="script.module.requests" version="2.18.4" />
+    <import addon="script.module.dnspython" version="1.12.0" />
+  </requires>
+  <extension library="lib" point="xbmc.python.module" />
+  <extension point="xbmc.addon.metadata">
+    <summary lang="en_GB">A module to use SmartDNS wth python requests</summary>
+    <description lang="en_GB">A module to use SmartDNS wth python requests</description>
+    <platform>all</platform>
+    <source>https://github.com/ronan-ln/script.module.smartdns</source>
+    <assets>
+      <icon>resources/icon.png</icon>
+      <fanart>resources/fanart.jpg</fanart>
+    </assets>
+    <news>v0.0.1 (2020-05-24)
+    - Initial version</news>
+  </extension>
 </addon></addons>
