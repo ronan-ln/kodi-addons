@@ -13,7 +13,10 @@ destination_folder = './download/' + addon_name + '/'
 zip_path = destination_folder + addon_name + '-' + addon_version + '.zip'
 
 print('Creating destination folder...')
-os.mkdir(destination_folder)
+try:
+    os.mkdir(destination_folder)
+except FileExistsError:
+    print('Skipping, it already exists')
 
 print('Downloading zip file from ' + addon_url +'...')
 res = requests.get(addon_url, stream=True)
@@ -23,8 +26,11 @@ with open(zip_path, 'wb') as fd:
 
 print('Reading zip file details...')
 zip = zipfile.ZipFile(zip_path)
-with zip.open(addon_name + '/addon.xml') as addon_xml:
-    addon_node = ElementTree.parse(addon_xml).getroot()
+for name in zip.namelist():
+    if name.endswith('/addon.xml'):
+        with zip.open(name) as addon_xml:
+            addon_node = ElementTree.parse(addon_xml).getroot()
+            break
 
 addons = ElementTree.parse('./addons.xml')
 addons_root = addons.getroot()
