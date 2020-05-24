@@ -38,6 +38,7 @@ addons_root.insert(len(addons_root), addon_node)
 
 addons.write('./addons.xml', encoding='utf-8', xml_declaration=True)
 print('\nYou can now run:'
-      '\n\tgit add', zip_path, ' addons.xml',
+      '\n\tmd5 -r addons.xml > addons.xml.md5'
+      '\n\tgit add', zip_path, ' addons.xml addons.xml.md5',
       '\n\tgit commit -m "Adding', addon_name, 'version', addon_version, 'from', addon_url, '"'
       '\n\tgit push')
